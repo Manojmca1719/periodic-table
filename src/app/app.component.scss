@@ -1,0 +1,115 @@
+.table-element {
+    display: grid;
+    grid-template-columns: repeat(18, 50px);
+
+    .elements {
+        width: 50px;
+        height: 50px;
+        position: relative;
+
+        .element {
+            &:hover {
+                cursor: pointer;
+
+                .atomic_no,
+                .atomic_weight_no,
+                .element_name {
+                    transform: scale(0.9);
+                    transition: 0.1s;
+                }
+
+                .element-symbol {
+                    transition: 0.1s;
+                    transform: scale(1.1);
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .atomic_no {
+            font-size: 8px;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 5px;
+            margin: auto;
+            transition: 0.1s;
+        }
+
+        .element_name {
+            font-size: 6px;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 8px;
+            margin: auto;
+            transition: 0.1s;
+        }
+
+        .atomic_weight_no {
+            font-size: 8px;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0px;
+            margin: auto;
+            transition: 0.1s;
+        }
+    }
+}
+
+.current_element {
+    width: 125px;
+    height: 125px;
+
+    .current_ele_atomic_no {
+        font-size: 16px;
+        margin-top: 4px;
+        text-align: center;
+    }
+
+    .current_ele_symbol {
+        font-size: 20px;
+        margin-top: 4px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .current_ele_name {
+        font-size: 14px;
+        margin-top: 4px;
+        text-align: center;
+    }
+
+    .current_ele_atomic_weight_no {
+        font-size: 16px;
+        margin-top: 4px;
+        text-align: center;
+    }
+}
+
+.hover_element {
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    border-radius: 5px;
+    background-color: black;
+    opacity: .5;
+    transition: .1s;
+    height: 350px;
+    overflow: auto;
+    &:hover {
+        opacity: 1;
+        transition: .1s;
+    }
+
+    .table {
+        font-size: 12px;
+        margin-bottom: 0;
+        height: 350px;
+        overflow-y: auto;
+    }
+}
